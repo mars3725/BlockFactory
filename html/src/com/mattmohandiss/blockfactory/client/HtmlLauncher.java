@@ -3,7 +3,8 @@ package com.mattmohandiss.blockfactory.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.mattmohandiss.blockfactory.MyGdxGame;
+import com.mattmohandiss.blockfactory.DeviceType;
+import com.mattmohandiss.blockfactory.GameStarter;
 
 public class HtmlLauncher extends GwtApplication {
 
@@ -46,6 +47,6 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener createApplicationListener () {
-                return new MyGdxGame();
+                return new GameStarter(DeviceType.web);
         }
 }
